@@ -21,7 +21,7 @@ export default async ({
     );
 
     if (Options) {
-      const newOptions = await Bluebird.map(Options, async (Option) => {
+      const newOptions = await Bluebird.mapSeries(Options, async (Option) => {
         const newOption = await db.models.Option.create(
           Option,
           {transaction},

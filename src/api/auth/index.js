@@ -50,6 +50,8 @@ export default (server, {
   options: {
     auth: {strategies: ["jwt"]},
     tags: ["api"],
-    response: responses.User,
+    response: {
+      schema: responses.User,
+    },
   },
 }]);

@@ -32,7 +32,7 @@ export default async ({
     await questionInstance.save({transaction});
 
     if (Options) {
-      const newOptions = await Bluebird.map(Options, async (Option) => {
+      const newOptions = await Bluebird.mapSeries(Options, async (Option) => {
         if (Option.id) {
           await db.models.Option.update(Option, {
             transaction,

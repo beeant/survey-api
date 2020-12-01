@@ -10,6 +10,14 @@ export default (jois, {
     success: Joi.boolean(),
   });
 
+  // user
+  responses.User = Joi.object(
+    jois.User.joi(),
+  ).keys({
+    ...withId,
+    ...withDates,
+  });
+
   // audience
   responses.Audience = Joi.object(
     jois.Audience.joi(),
