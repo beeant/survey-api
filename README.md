@@ -19,7 +19,9 @@ Backend server for survey API written in node.js using [hapi.js](https://github.
 ```
 yarn
 ````
-2. Start development server
+2. Edit `.env` file according to local environment and preferences
+
+3. Start development server
 ```
 yarn start
 ```
