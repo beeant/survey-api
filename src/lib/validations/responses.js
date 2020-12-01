@@ -11,9 +11,9 @@ export default (jois, {
   });
 
   // user
-  responses.User = Joi.object(
-    jois.User.joi(),
-  ).keys({
+  responses.User = Joi.object({
+    email: Joi.string().required(),
+  }).keys({
     ...withId,
     ...withDates,
   });
